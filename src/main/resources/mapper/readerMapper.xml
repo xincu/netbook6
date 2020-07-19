@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mapper.ReaderMapper" >
+<select id="onereader" resultType="com.entity.reader" parameterType="String">
+select
+* from
+reader
+where  raccount=#{raccount}and rpassword=#{rpassword}
+
+
+</select>
+<insert id="addReader" parameterType="com.entity.reader" >
+insert  into
+ reader(rname, rpassword, raccount)
+ value (#{rname},#{rpassword},#{raccount})
+</insert>
+<select id="IsexistRaccount" resultType="com.entity.reader" parameterType="String">
+    select *
+    from reader
+    where raccount = #{raccount};
+
+</select>
+<select id="Count" resultType="Integer">
+    select    count(rid) from  reader
+</select>
+    <select id="AllReader" resultType="com.entity.reader">
+        select  * from  reader
+    </select>
+    <select id="GetOneReader" resultType="com.entity.reader" parameterType="String">
+        select  * from  reader where raccount=#{raccount}
+    </select>
+
+    <select id="findAnyReader" parameterType="Integer" resultType="com.entity.reader">
+        select  *
+        from  reader
+        limit #{start},#{pageSize}
+    </select>
+    <select id="likeReader" resultType="com.entity.reader" parameterType="String">
+        select  * from reader
+        where  rname like '%' #{keyWord} '%'
+    </select>
+</mapper>

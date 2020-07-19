@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<form action="login1" method="post">
+读者账号<input type="text" name="raccount" id="raccount">
+读者密码<input type="password" name="rpassword" id="rpassword">
+    <input type="submit" name="提交">
+</form>-->
+<form action="login2" method="post">
+    作者账号<input type="text" name="waccount" id="waccount">
+    读者密码<input type="password" name="wpassword" id="wpassword">
+    <input type="submit" name="提交">
+</form>
+<form action="login3" method="post">
+    管理账号<input type="text" name="gaccount" id="gaccount">
+    读者密码<input type="password" name="gpassword" id="gpassword">
+    <input type="submit" name="提交"></form>
+    <hr>
+    <br>
+    <br>
+    <br>
+    读者注册
+    <form action="register1" method="post">
+    账号<input type="text" name="raccount"><br>
+    密码<input type="password" name="rpassword" id="rpassword1"><br>
+    确认密码<input type="password" name="rpassword1" id="rpassword2"><br>
+        用户名<input type="text" name="rname"><br>
+        <input type="submit" value="注册" id="sub">
+    </form>
+
+
+<hr>
+账号存在判断
+<form method="post" action="IsexistRaccount">
+    读者账号<input type="text" name="raccount"  id="raccount">
+    <input type="submit" name="提交">
+</form>
+        显示有多少个用户
+<form action="Count1" method="post">
+    <input type="submit" name="显示">
+</form>
+
+<form method="post" action="AllReader">
+    <input type="submit" name="显示所有用户">
+</form>
+
+
+<form method="post" action="/GetOneReader">
+    输入要搜素的账号 <input type="text" name="raccount">
+    <input type="submit" name="显示搜索的用户">
+</form>
+<form action="/findAnyReader" method="post">
+    输入要查询的页数<input type="text" name="PageNum">
+    输入一页的个数<input type="text" name="PageSize">
+    <input type="submit" value="提交">
+</form>
+<form method="post" action="likeReader">
+    请输入搜索的读者姓名的关键字<input type="text" name="KeyWord">
+    <input type="submit" value="搜素">
+</form>
+</body>
+</html>
